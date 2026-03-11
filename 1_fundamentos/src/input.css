@@ -5,3 +5,7 @@
 .container {
     @apply mx-auto
 }
+
+@theme {
+    --shadow-custom: 10px 35px 30px 10px red;
+}
