@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Design Responsivo</title>
+</head>
+
+
+<!-- Breakpoints: sm · (640px) · | · md · (768px) ·|·1g (1024px) · | ·x1 · (1280px) · | · 2x1 · (1536px) · | -3x1 (1792px)-->
+
+<body class="bg-gray-800 flex items-center justify-center gap-4 p-10 flex-wrap">
+
+    <div class="w-48 bg-sky-500 text-white rounded-md p-4 text-center">
+        Smartphones (Até 640px)
+    </div>
+
+    <div class="w-56 bg-yellow-500 text-white rounded-md p-4 hidden md:block text-center  2xl:bg-black">
+        Tablets (Até 768px)
+    </div>
+
+    <div class="w-64 bg-orange-500 text-white rounded-md p-4 hidden lg:block text-center">
+        Desktops (Até 1024px)
+    </div>
+
+    <div class="w-72 bg-red-500 text-white rounded-md p-4 hidden xl:block text-center">
+        Monitores grandes (Até 1280px)
+    </div>
+
+    <div class="w-80 bg-green-500 text-white rounded-md p-4 hidden 2xl:block text-center">
+        Monitores extra (Até 1536px)
+    </div>
+
+    <div class="w-96 bg-emerald-700 text-white rounded-md p-4 hidden 3xl:block text-center">
+        Monitores customizados (Até 1792px)
+    </div>
+
+</body>
+
+</html>
