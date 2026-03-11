@@ -10,3 +10,21 @@
     --shadow-custom: 10px 35px 30px 10px red;
     --breakpoint-3xl: 1792px;
 }
+
+@layer utilities {
+    @keyframes wiggle {
+
+        0%,
+        100% {
+            transform: rotate(-3deg);
+        }
+
+        50% {
+            transform: rotate(3deg);
+        }
+    }
+
+    .animate-wiggle {
+        animation: wiggle .3s ease-in-out infinite;
+    }
+}
