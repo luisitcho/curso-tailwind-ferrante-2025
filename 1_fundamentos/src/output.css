@@ -33,6 +33,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
+    --container-xl: 36rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-base: 1rem;
@@ -203,6 +204,9 @@
   }
 }
 @layer utilities {
+  .\@container {
+    container-type: inline-size;
+  }
   .absolute {
     position: absolute;
   }
@@ -335,11 +339,20 @@
   .w-full {
     width: 100%;
   }
+  .w-sm {
+    width: var(--container-sm);
+  }
+  .w-xl {
+    width: var(--container-xl);
+  }
   .max-w-\[240px\] {
     max-width: 240px;
   }
   .max-w-sm {
     max-width: var(--container-sm);
+  }
+  .max-w-xl {
+    max-width: var(--container-xl);
   }
   .flex-1 {
     flex: 1;
@@ -718,6 +731,26 @@
   .\32 xl\:bg-black {
     @media (width >= 96rem) {
       background-color: var(--color-black);
+    }
+  }
+  .\@max-sm\:bg-red-500 {
+    @container (width < 24rem) {
+      background-color: var(--color-red-500);
+    }
+  }
+  .\@max-sm\:text-center {
+    @container (width < 24rem) {
+      text-align: center;
+    }
+  }
+  .\@min-sm\:bg-red-500 {
+    @container (width >= 24rem) {
+      background-color: var(--color-red-500);
+    }
+  }
+  .\@sm\:bg-red-500 {
+    @container (width >= 24rem) {
+      background-color: var(--color-red-500);
     }
   }
 }
